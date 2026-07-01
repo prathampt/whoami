@@ -3,45 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Pratham Tandale</title>
-  <meta name="description" content="Blog posts by Pratham Tandale — thoughts on systems programming, operating systems, algorithms, and more.">
+  <title>Dance — Pratham Tandale</title>
+  <meta name="description" content="Dance videos by Pratham Tandale — because life is too short to not dance.">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
 </head>
 <body>
-  <div class="container">
+  <div class="container container-wide">
 
     <!-- Navigation -->
     <nav class="nav" id="main-nav">
       <a href="index.html">home</a>
       <span class="nav-separator">·</span>
-      <a href="blog.html" class="active">blog</a>
+      <a href="blog.html">blog</a>
       <span class="nav-separator">·</span>
       <a href="kavita.html">कविता</a>
       <span class="nav-separator">·</span>
       <a href="books.html">books</a>
       <span class="nav-separator">·</span>
-      <a href="dance.html">dance</a>
+      <a href="dance.html" class="active">dance</a>
       <span class="nav-separator">·</span>
       <a href="https://github.com/prathampt" target="_blank" rel="noopener">github</a>
     </nav>
 
     <!-- Page Header -->
-    <div class="page-header" id="blog-header">
-      <h1>Blog</h1>
-      <p>Thoughts, explorations, and things I've learned along the way.</p>
+    <div class="page-header" id="dance-header">
+      <h1>Dance</h1>
+      <p>Because life is too short to not dance — click to watch on Instagram.</p>
     </div>
 
-    <!-- Posts Container -->
-    <div class="posts-container" id="blog-posts-container">
-      <!-- Populated by script.js -->
+    <!-- Dance Grid -->
+    <div class="dance-grid" id="dance-grid">
+      <!-- Populated dynamically by script.js -->
     </div>
 
     <!-- Empty State -->
-    <div class="empty-state" id="blog-empty" style="display: none;">
-      <span class="emoji">✍️</span>
-      <p>No posts yet — but they're coming soon!</p>
-      <p>Check back later, or follow me on <a href="https://github.com/prathampt" target="_blank" rel="noopener" style="color: var(--link);">GitHub</a> for updates.</p>
+    <div class="empty-state" id="dance-empty" style="display: none;">
+      <span class="emoji">🕺</span>
+      <p>Dance videos loading...</p>
     </div>
 
     <!-- Footer -->
@@ -58,7 +57,7 @@
   <script src="script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      loadPosts('blog-posts.json', 'blog-posts-container', 'blog-empty', false);
+      loadDances('dances.json', 'dance-grid', 'dance-empty');
     });
   </script>
 </body>

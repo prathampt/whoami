@@ -1,0 +1,44 @@
+[
+  {
+    "name": "cosmos",
+    "emoji": "🌌",
+    "description": "A MINIX-inspired microkernel operating system built from scratch — with IPC, a virtual file system, process management, and user-space servers. My deepest dive into how computers actually work.",
+    "url": "https://github.com/prathampt/cosmos",
+    "tags": ["C", "x86", "OS"]
+  },
+  {
+    "name": "dataStructureVisualizer",
+    "emoji": "🧊",
+    "description": "An interactive tool that renders data structures as 3D objects — because sometimes you need to see a red-black tree from every angle to understand it.",
+    "url": "https://github.com/prathampt/dataStructureVisualizer",
+    "tags": ["C", "3D", "visualization"]
+  },
+  {
+    "name": "programmingHabits",
+    "emoji": "🍅",
+    "description": "A native Linux productivity tool that integrates Pomodoro technique with health reminders. Because even programmers need to drink water and stretch.",
+    "url": "https://github.com/prathampt/programmingHabits",
+    "tags": ["Python", "GTK", "Linux"]
+  },
+  {
+    "name": "parallelFileTransfer",
+    "emoji": "⚡",
+    "description": "Accelerates large file transfers by splitting them into chunks and sending them over parallel TCP connections. Networking meets performance engineering.",
+    "url": "https://github.com/prathampt/parallelFileTransfer",
+    "tags": ["Python", "TCP", "networking"]
+  },
+  {
+    "name": "xv6",
+    "emoji": "🖥️",
+    "description": "My enhanced fork of the xv6 teaching operating system — because reading Linux kernel code is hard, but reading xv6 is a joy. Added custom features and experiments.",
+    "url": "https://github.com/prathampt/xv6",
+    "tags": ["C", "OS", "RISC-V"]
+  },
+  {
+    "name": "DSA",
+    "emoji": "📚",
+    "description": "Comprehensive implementations of data structures and algorithms, purely in C. All the classics: trees, graphs, sorting, searching — the building blocks of everything.",
+    "url": "https://github.com/prathampt/DSA",
+    "tags": ["C", "algorithms"]
+  }
+]

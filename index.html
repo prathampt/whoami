@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pratham Tandale — Feet on ground, eyes on stars</title>
-  <meta name="description" content="Hi, I'm Pratham Tandale — a computer engineer at COEP Tech who loves building things from scratch, writing Marathi poetry, and solving problems that make me think.">
+  <meta name="description" content="Hi, I'm Pratham Tandale — a computer engineer at COEP Tech who loves building things from scratch, writing Marathi poetry, dancing, reading, and solving problems that make me think.">
   <meta property="og:title" content="Pratham Tandale">
-  <meta property="og:description" content="Computer engineer, systems programmer, poet. Feet on ground, eyes on stars.">
+  <meta property="og:description" content="Computer engineer, systems programmer, dancer, reader, poet. Feet on ground, eyes on stars.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
@@ -20,6 +20,10 @@
       <span class="nav-separator">·</span>
       <a href="kavita.html">कविता</a>
       <span class="nav-separator">·</span>
+      <a href="books.html">books</a>
+      <span class="nav-separator">·</span>
+      <a href="dance.html">dance</a>
+      <span class="nav-separator">·</span>
       <a href="https://github.com/prathampt" target="_blank" rel="noopener">github</a>
     </nav>
 
@@ -29,97 +33,48 @@
       <h1>I'm Pratham Tandale</h1>
       <p class="hero-motto">"Feet on ground, eyes on stars"</p>
       <p class="hero-intro">
-        I'm a computer engineer at <a href="https://www.coep.org.in/" target="_blank" rel="noopener">COEP Tech</a> 
-        who loves building things close to the metal — kernels, operating systems, data structures, 
-        and the invisible scaffolding that makes software run. I also write 
-        <a href="kavita.html">Marathi poetry</a>, solve puzzles on 
-        <a href="https://leetcode.com/u/prathamt12345/" target="_blank" rel="noopener">LeetCode</a>, 
+        I'm a computer engineer at <a href="https://www.coep.org.in/" target="_blank" rel="noopener">COEP Tech</a>
+        who loves building things close to the metal — kernels, operating systems, data structures,
+        and the invisible scaffolding that makes software run. But there's more to me than code — I
+        <a href="dance.html">dance</a>, write
+        <a href="kavita.html">Marathi poetry</a>,
+        <a href="books.html">read voraciously</a>, meditate,
         and sometimes blog about stuff I find interesting.
       </p>
     </section>
 
-    <!-- Projects -->
+    <!-- Beyond Code — compact hobby cards -->
+    <section class="section" id="beyond-code">
+      <h2 class="section-header">Beyond Code</h2>
+      <div class="hobby-cards">
+        <a class="hobby-card" href="dance.html" id="hobby-dance">
+          <span class="hobby-card-emoji">💃</span>
+          <span class="hobby-card-label">Dance</span>
+          <span class="hobby-card-sub" id="dance-count">videos</span>
+        </a>
+        <a class="hobby-card" href="books.html" id="hobby-books">
+          <span class="hobby-card-emoji">📚</span>
+          <span class="hobby-card-label">Books</span>
+          <span class="hobby-card-sub" id="books-count">read</span>
+        </a>
+        <a class="hobby-card" href="kavita.html" id="hobby-kavita">
+          <span class="hobby-card-emoji">🪷</span>
+          <span class="hobby-card-label">कविता</span>
+          <span class="hobby-card-sub" id="kavita-count">poems</span>
+        </a>
+        <span class="hobby-card hobby-card-static" id="hobby-meditate">
+          <span class="hobby-card-emoji">🧘</span>
+          <span class="hobby-card-label">Meditate</span>
+          <span class="hobby-card-sub">daily</span>
+        </span>
+      </div>
+    </section>
+
+    <!-- Projects (loaded dynamically from API / fallback JSON) -->
     <section class="section" id="projects">
       <h2 class="section-header">Stuff I've Built</h2>
-      <div class="projects-grid">
-
-        <a class="project-card animate-in" href="https://github.com/prathampt/cosmos" target="_blank" rel="noopener" id="project-cosmos">
-          <div class="project-card-header">
-            <h3>🌌 COSMOS Micro-kernel</h3>
-            <span class="project-card-arrow">→</span>
-          </div>
-          <p>A MINIX-inspired microkernel operating system built from scratch — with IPC, a virtual file system, process management, and user-space servers. My deepest dive into how computers actually work.</p>
-          <div class="project-card-tags">
-            <span class="tag">C</span>
-            <span class="tag">x86</span>
-            <span class="tag">OS</span>
-          </div>
-        </a>
-
-        <a class="project-card animate-in" href="https://github.com/prathampt/dataStructureVisualizer" target="_blank" rel="noopener" id="project-dsvis">
-          <div class="project-card-header">
-            <h3>🧊 3D Data-Structure Visualizer</h3>
-            <span class="project-card-arrow">→</span>
-          </div>
-          <p>An interactive tool that renders data structures as 3D objects — because sometimes you need to see a red-black tree from every angle to understand it.</p>
-          <div class="project-card-tags">
-            <span class="tag">C</span>
-            <span class="tag">3D</span>
-            <span class="tag">visualization</span>
-          </div>
-        </a>
-
-        <a class="project-card animate-in" href="https://github.com/prathampt/programmingHabits" target="_blank" rel="noopener" id="project-habits">
-          <div class="project-card-header">
-            <h3>🍅 ProgrammingHabits</h3>
-            <span class="project-card-arrow">→</span>
-          </div>
-          <p>A native Linux productivity tool that integrates Pomodoro technique with health reminders. Because even programmers need to drink water and stretch.</p>
-          <div class="project-card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">GTK</span>
-            <span class="tag">Linux</span>
-          </div>
-        </a>
-
-        <a class="project-card animate-in" href="https://github.com/prathampt/parallelFileTransfer" target="_blank" rel="noopener" id="project-pft">
-          <div class="project-card-header">
-            <h3>⚡ Parallel File Transfer</h3>
-            <span class="project-card-arrow">→</span>
-          </div>
-          <p>Accelerates large file transfers by splitting them into chunks and sending them over parallel TCP connections. Networking meets performance engineering.</p>
-          <div class="project-card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">TCP</span>
-            <span class="tag">networking</span>
-          </div>
-        </a>
-
-        <a class="project-card animate-in" href="https://github.com/prathampt/xv6" target="_blank" rel="noopener" id="project-xv6">
-          <div class="project-card-header">
-            <h3>🖥️ xv6 (Enhanced)</h3>
-            <span class="project-card-arrow">→</span>
-          </div>
-          <p>My enhanced fork of the xv6 teaching operating system — because reading Linux kernel code is hard, but reading xv6 is a joy. Added custom features and experiments.</p>
-          <div class="project-card-tags">
-            <span class="tag">C</span>
-            <span class="tag">OS</span>
-            <span class="tag">RISC-V</span>
-          </div>
-        </a>
-
-        <a class="project-card animate-in" href="https://github.com/prathampt/DSA" target="_blank" rel="noopener" id="project-dsa">
-          <div class="project-card-header">
-            <h3>📚 DSA in C</h3>
-            <span class="project-card-arrow">→</span>
-          </div>
-          <p>Comprehensive implementations of data structures and algorithms, purely in C. All the classics: trees, graphs, sorting, searching — the building blocks of everything.</p>
-          <div class="project-card-tags">
-            <span class="tag">C</span>
-            <span class="tag">algorithms</span>
-          </div>
-        </a>
-
+      <div class="projects-grid" id="projects-grid">
+        <!-- Populated by script.js dynamically -->
       </div>
     </section>
 
@@ -158,7 +113,7 @@
           GitHub
         </a>
         <a class="social-link" href="https://leetcode.com/u/prathamt12345/" target="_blank" rel="noopener" id="link-leetcode">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l.257.213a1.38 1.38 0 0 0 1.95-.003c.54-.54.543-1.414.003-1.955l-.257-.213A5.567 5.567 0 0 0 13.483 0zm5.066 9.278a1.381 1.381 0 0 0-.976.404l-5.541 5.534a1.381 1.381 0 0 0 0 1.952 1.381 1.381 0 0 0 1.952 0l5.541-5.535c.54-.54.54-1.414 0-1.951a1.381 1.381 0 0 0-.976-.404z"/></svg>
+          <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="m15.42 16.94-2.25 2.17a2.1 2.1 0 0 1-1.52.56 2.1 2.1 0 0 1-1.52-.56l-3.61-3.63a2.18 2.18 0 0 1-.58-1.55 2.07 2.07 0 0 1 .58-1.52l3.6-3.65a2.1 2.1 0 0 1 1.53-.54 2.08 2.08 0 0 1 1.52.55l2.25 2.17A1.14 1.14 0 0 0 17 9.33l-2.17-2.2a4.24 4.24 0 0 0-2-1.12l2.06-2.08a1.15 1.15 0 0 0-1.62-1.62l-8.43 8.42a4.48 4.48 0 0 0-1.24 3.2 4.57 4.57 0 0 0 1.24 3.23l3.63 3.63A4.38 4.38 0 0 0 11.66 22a4.45 4.45 0 0 0 3.2-1.25L17 18.56a1.14 1.14 0 0 0-1.61-1.62z"/><path d="M19.34 12.84h-8.45a1.12 1.12 0 0 0 0 2.24h8.45a1.12 1.12 0 0 0 0-2.24"/></svg>
           LeetCode
         </a>
         <a class="social-link" href="https://www.linkedin.com/in/pratham-tandale-681785232/" target="_blank" rel="noopener" id="link-linkedin">
@@ -185,10 +140,11 @@
 
   <script src="script.js"></script>
   <script>
-    // Load blog and kavita previews on the home page
     document.addEventListener('DOMContentLoaded', () => {
+      loadProjects('projects.json', 'projects-grid');
       loadPreview('blog-posts.json', 'blog-preview-list', 'blog-preview-empty', 3, false);
       loadPreview('kavitas.json', 'kavita-preview-list', 'kavita-preview-empty', 3, true);
+      loadHobbyCounts();
     });
   </script>
 </body>
