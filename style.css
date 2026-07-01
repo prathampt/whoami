@@ -553,6 +553,12 @@ body::before {
   margin-bottom: var(--space-md);
 }
 
+.empty-state .emoji svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--accent);
+}
+
 /* --- Individual Post / Kavita Page --- */
 .post-page {
   padding: var(--space-xl) 0;
@@ -797,6 +803,12 @@ body::before {
 .hobby-card-emoji {
   font-size: 1.8rem;
   line-height: 1;
+}
+
+.hobby-card-emoji svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: var(--accent);
 }
 
 .hobby-card-label {

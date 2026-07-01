@@ -104,16 +104,6 @@ async function loadProjects(fallbackJsonFile, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  const emojiMap = {
-    "cosmos": "🌌",
-    "datastructurevisualizer": "🧊",
-    "programminghabits": "🍅",
-    "calc": "🧮",
-    "dsa": "📚",
-    "parallelfiletransfer": "⚡",
-    "xv6": "🖥️"
-  };
-
   try {
     // Attempt dynamic fetch from github pinned proxy
     const response = await fetch("https://pinned.berrysauce.dev/get/prathampt");
@@ -124,7 +114,6 @@ async function loadProjects(fallbackJsonFile, containerId) {
 
     container.innerHTML = pinnedRepos.map((repo, i) => {
       const nameLower = repo.name.toLowerCase();
-      const emoji = emojiMap[nameLower] || "💻";
       const repoUrl = `https://github.com/${repo.author}/${repo.name}`;
       
       // Clean description
@@ -139,7 +128,7 @@ async function loadProjects(fallbackJsonFile, containerId) {
       return `
         <a class="project-card animate-in" href="${repoUrl}" target="_blank" rel="noopener" style="animation-delay: ${i * 0.05}s">
           <div class="project-card-header">
-            <h3>${emoji} ${repo.name}</h3>
+            <h3>${repo.name}</h3>
             <span class="project-card-arrow">→</span>
           </div>
           <p>${desc}</p>
@@ -161,7 +150,7 @@ async function loadProjects(fallbackJsonFile, containerId) {
       container.innerHTML = projects.map((project, i) => `
         <a class="project-card animate-in" href="${project.url}" target="_blank" rel="noopener" style="animation-delay: ${i * 0.05}s">
           <div class="project-card-header">
-            <h3>${project.emoji} ${project.name}</h3>
+            <h3>${project} ${project.name}</h3>
             <span class="project-card-arrow">→</span>
           </div>
           <p>${project.description}</p>
