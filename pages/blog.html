@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>कविता — Pratham Tandale</title>
-  <meta name="description" content="Marathi poems (kavita) by Pratham Tandale — कविता, विचार आणि भावना.">
-  <link rel="stylesheet" href="style.css">
+  <title>Blog — Pratham Tandale</title>
+  <meta name="description" content="Blog posts by Pratham Tandale — thoughts on systems programming, operating systems, algorithms, and more.">
+  <link rel="stylesheet" href="../style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
 </head>
 <body>
@@ -13,11 +13,11 @@
 
     <!-- Navigation -->
     <nav class="nav" id="main-nav">
-      <a href="index.html">home</a>
+      <a href="../index.html">home</a>
       <span class="nav-separator">·</span>
-      <a href="blog.html">blog</a>
+      <a href="blog.html" class="active">blog</a>
       <span class="nav-separator">·</span>
-      <a href="kavita.html" class="active">कविता</a>
+      <a href="kavita.html">कविता</a>
       <span class="nav-separator">·</span>
       <a href="books.html">books</a>
       <span class="nav-separator">·</span>
@@ -27,21 +27,21 @@
     </nav>
 
     <!-- Page Header -->
-    <div class="page-header" id="kavita-header">
-      <h1 class="devanagari">कविता</h1>
-      <p>माझ्या मनातले शब्द, कागदावर उतरलेले...</p>
+    <div class="page-header" id="blog-header">
+      <h1>Blog</h1>
+      <p>Thoughts, explorations, and things I've learned along the way.</p>
     </div>
 
     <!-- Posts Container -->
-    <div class="posts-container" id="kavita-posts-container">
+    <div class="posts-container" id="blog-posts-container">
       <!-- Populated by script.js -->
     </div>
 
     <!-- Empty State -->
-    <div class="empty-state" id="kavita-empty" style="display: none;">
-      <span class="emoji">🪷</span>
-      <p>कविता लवकरच येतील...</p>
-      <p>Poems are on their way — check back soon!</p>
+    <div class="empty-state" id="blog-empty" style="display: none;">
+      <span class="emoji">✍️</span>
+      <p>No posts yet — but they're coming soon!</p>
+      <p>Check back later, or follow me on <a href="https://github.com/prathampt" target="_blank" rel="noopener" style="color: var(--link);">GitHub</a> for updates.</p>
     </div>
 
     <!-- Footer -->
@@ -49,16 +49,16 @@
       <p>
         made with <span class="footer-heart">♥</span> by pratham
         <br>
-        <a href="index.html">back to home</a>
+        <a href="../index.html">back to home</a>
       </p>
     </footer>
 
   </div>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      loadPosts('kavitas.json', 'kavita-posts-container', 'kavita-empty', true);
+      loadPosts('../data/blog-posts.json', 'blog-posts-container', 'blog-empty', false);
     });
   </script>
 </body>

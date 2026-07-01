@@ -4,6 +4,18 @@
    ============================================ */
 
 /**
+ * Returns the relative path prefix depending on page location.
+ * Helps resolve root assets/links when files are nested under /pages/ or other folders.
+ */
+function getPathPrefix() {
+  const path = window.location.pathname;
+  if (path.includes('/pages/') || path.includes('/posts/') || path.includes('/kavitas/')) {
+    return '../';
+  }
+  return '';
+}
+
+/**
  * Load a preview of posts (used on the home page).
  * Fetches a JSON file, renders the first `limit` items as a compact list.
  */
@@ -29,7 +41,7 @@ async function loadPreview(jsonFile, listId, emptyId, limit, isDevanagari) {
 
     const items = posts.slice(0, limit);
     list.innerHTML = items.map(post => `
-      <a class="post-item" href="${post.url}">
+      <a class="post-item" href="${getPathPrefix() + post.url}">
         <span class="post-item-title ${isDevanagari ? 'devanagari' : ''}">${post.title}</span>
         <span class="post-item-dash">—</span>
         <span class="post-item-date">${formatDate(post.date)}</span>
@@ -66,7 +78,7 @@ async function loadPosts(jsonFile, containerId, emptyId, isDevanagari) {
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     container.innerHTML = posts.map((post, i) => `
-      <a class="post-card animate-in" href="${post.url}" style="animation-delay: ${i * 0.05}s">
+      <a class="post-card animate-in" href="${getPathPrefix() + post.url}" style="animation-delay: ${i * 0.05}s">
         <h2 class="${isDevanagari ? 'devanagari' : ''}">${post.title}</h2>
         <div class="post-card-meta">${formatDate(post.date)}</div>
         <p>${post.description || ''}</p>
@@ -304,7 +316,7 @@ async function loadDances(jsonFile, containerId, emptyId) {
       <a class="dance-card animate-in" href="${dance.instagram_url}" target="_blank" rel="noopener"
          style="animation-delay: ${i * 0.05}s">
         <div class="dance-card-thumb">
-          <img src="${dance.thumbnail}" alt="${escapeAttr(dance.title)}" loading="lazy">
+          <img src="${getPathPrefix() + dance.thumbnail}" alt="${escapeAttr(dance.title)}" loading="lazy">
           <div class="dance-card-play">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           </div>
@@ -326,9 +338,10 @@ async function loadDances(jsonFile, containerId, emptyId) {
  * Load counts for hobby cards on the homepage.
  */
 async function loadHobbyCounts() {
+  const prefix = getPathPrefix();
   // Books count
   try {
-    const booksRes = await fetch('books.json');
+    const booksRes = await fetch(prefix + 'data/books.json');
     if (booksRes.ok) {
       const books = await booksRes.json();
       const el = document.getElementById('books-count');
@@ -338,7 +351,7 @@ async function loadHobbyCounts() {
 
   // Dance count
   try {
-    const danceRes = await fetch('dances.json');
+    const danceRes = await fetch(prefix + 'data/dances.json');
     if (danceRes.ok) {
       const dances = await danceRes.json();
       const el = document.getElementById('dance-count');
@@ -348,7 +361,7 @@ async function loadHobbyCounts() {
 
   // Kavita count
   try {
-    const kavitaRes = await fetch('kavitas.json');
+    const kavitaRes = await fetch(prefix + 'data/kavitas.json');
     if (kavitaRes.ok) {
       const kavitas = await kavitaRes.json();
       const el = document.getElementById('kavita-count');

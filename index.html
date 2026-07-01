@@ -16,13 +16,13 @@
 
     <!-- Navigation -->
     <nav class="nav" id="main-nav">
-      <a href="blog.html">blog</a>
+      <a href="pages/blog.html">blog</a>
       <span class="nav-separator">·</span>
-      <a href="kavita.html">कविता</a>
+      <a href="pages/kavita.html">कविता</a>
       <span class="nav-separator">·</span>
-      <a href="books.html">books</a>
+      <a href="pages/books.html">books</a>
       <span class="nav-separator">·</span>
-      <a href="dance.html">dance</a>
+      <a href="pages/dance.html">dance</a>
       <span class="nav-separator">·</span>
       <a href="https://github.com/prathampt" target="_blank" rel="noopener">github</a>
     </nav>
@@ -36,9 +36,9 @@
         I'm a computer engineer at <a href="https://www.coep.org.in/" target="_blank" rel="noopener">COEP Tech</a>
         who loves building things close to the metal — kernels, operating systems, data structures,
         and the invisible scaffolding that makes software run. But there's more to me than code — I
-        <a href="dance.html">dance</a>, write
-        <a href="kavita.html">Marathi poetry</a>,
-        <a href="books.html">read voraciously</a>, meditate,
+        <a href="pages/dance.html">dance</a>, write
+        <a href="pages/kavita.html">Marathi poetry</a>,
+        <a href="pages/books.html">read voraciously</a>, meditate,
         and sometimes blog about stuff I find interesting.
       </p>
     </section>
@@ -47,17 +47,17 @@
     <section class="section" id="beyond-code">
       <h2 class="section-header">Beyond Code</h2>
       <div class="hobby-cards">
-        <a class="hobby-card" href="dance.html" id="hobby-dance">
+        <a class="hobby-card" href="pages/dance.html" id="hobby-dance">
           <span class="hobby-card-emoji">💃</span>
           <span class="hobby-card-label">Dance</span>
           <span class="hobby-card-sub" id="dance-count">videos</span>
         </a>
-        <a class="hobby-card" href="books.html" id="hobby-books">
+        <a class="hobby-card" href="pages/books.html" id="hobby-books">
           <span class="hobby-card-emoji">📚</span>
           <span class="hobby-card-label">Books</span>
           <span class="hobby-card-sub" id="books-count">read</span>
         </a>
-        <a class="hobby-card" href="kavita.html" id="hobby-kavita">
+        <a class="hobby-card" href="pages/kavita.html" id="hobby-kavita">
           <span class="hobby-card-emoji">🪷</span>
           <span class="hobby-card-label">कविता</span>
           <span class="hobby-card-sub" id="kavita-count">poems</span>
@@ -88,7 +88,7 @@
         <span class="emoji">✍️</span>
         Posts coming soon — stay tuned!
       </p>
-      <a href="blog.html" class="section-more">(see all posts)</a>
+      <a href="pages/blog.html" class="section-more">(see all posts)</a>
     </section>
 
     <!-- Kavita Preview -->
@@ -101,7 +101,7 @@
         <span class="emoji">🪷</span>
         कविता लवकरच येतील...
       </p>
-      <a href="kavita.html" class="section-more">(see all kavitas)</a>
+      <a href="pages/kavita.html" class="section-more">(see all kavitas)</a>
     </section>
 
     <!-- Find Me -->
@@ -141,9 +141,9 @@
   <script src="script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      loadProjects('projects.json', 'projects-grid');
-      loadPreview('blog-posts.json', 'blog-preview-list', 'blog-preview-empty', 3, false);
-      loadPreview('kavitas.json', 'kavita-preview-list', 'kavita-preview-empty', 3, true);
+      loadProjects('data/projects.json', 'projects-grid');
+      loadPreview('data/blog-posts.json', 'blog-preview-list', 'blog-preview-empty', 3, false);
+      loadPreview('data/kavitas.json', 'kavita-preview-list', 'kavita-preview-empty', 3, true);
       loadHobbyCounts();
     });
   </script>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Books — Pratham Tandale</title>
   <meta name="description" content="Books I've read — a visual bookshelf of covers, from Murakami to Taleb.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
 </head>
 <body>
@@ -13,7 +13,7 @@
 
     <!-- Navigation -->
     <nav class="nav" id="main-nav">
-      <a href="index.html">home</a>
+      <a href="../index.html">home</a>
       <span class="nav-separator">·</span>
       <a href="blog.html">blog</a>
       <span class="nav-separator">·</span>
@@ -58,16 +58,16 @@
       <p>
         made with <span class="footer-heart">♥</span> by pratham
         <br>
-        <a href="index.html">back to home</a>
+        <a href="../index.html">back to home</a>
       </p>
     </footer>
 
   </div>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      loadBooks('books.json', 'books-grid', 'books-empty');
+      loadBooks('../data/books.json', 'books-grid', 'books-empty');
     });
   </script>
 </body>
