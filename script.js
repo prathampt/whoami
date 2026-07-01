@@ -78,7 +78,7 @@ async function loadPosts(jsonFile, containerId, emptyId, isDevanagari) {
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     container.innerHTML = posts.map((post, i) => `
-      <a class="post-card animate-in" href="${getPathPrefix() + post.url}" style="animation-delay: ${i * 0.05}s">
+      <a class="post-card animate-in ${isDevanagari ? 'devanagari' : ''}" href="${getPathPrefix() + post.url}" style="animation-delay: ${i * 0.05}s">
         <h2 class="${isDevanagari ? 'devanagari' : ''}">${post.title}</h2>
         <div class="post-card-meta">${formatDate(post.date)}</div>
         <p>${post.description || ''}</p>

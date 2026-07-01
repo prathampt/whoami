@@ -452,6 +452,16 @@ body::before {
   font-size: 0.95rem;
 }
 
+.page-header p.devanagari {
+  font-family: var(--font-devanagari);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 .posts-container {
   display: flex;
   flex-direction: column;
@@ -486,6 +496,24 @@ body::before {
 
 .post-card h2.devanagari {
   font-family: var(--font-devanagari);
+}
+
+.post-card.devanagari p {
+  font-family: var(--font-devanagari) !important;
+  font-size: 1.02rem !important;
+  line-height: 1.7 !important;
+  color: var(--text-primary) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.post-card.devanagari .tag {
+  font-family: var(--font-devanagari) !important;
+  font-weight: 500 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .post-card-meta {
