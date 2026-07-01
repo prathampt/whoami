@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Why I Built a Micro-kernel from Scratch",
+    "date": "2026-07-01",
+    "description": "The story behind COSMOS — what drove me to build an operating system kernel, what I learned about IPC, memory management, and why every CS student should try it.",
+    "url": "posts/why-i-built-a-microkernel.html",
+    "tags": ["systems", "OS", "C"]
+  }
+]

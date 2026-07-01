@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why I Built a Micro-kernel from Scratch — Pratham Tandale</title>
+  <meta name="description" content="The story behind COSMOS — what drove me to build an operating system kernel, what I learned, and why every CS student should try it.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Navigation -->
+    <nav class="nav" id="main-nav">
+      <a href="../index.html">home</a>
+      <span class="nav-separator">·</span>
+      <a href="../blog.html" class="active">blog</a>
+      <span class="nav-separator">·</span>
+      <a href="../kavita.html">कविता</a>
+      <span class="nav-separator">·</span>
+      <a href="https://github.com/prathampt" target="_blank" rel="noopener">github</a>
+    </nav>
+
+    <!-- Post Content -->
+    <article class="post-page" id="post">
+      <a href="../blog.html" class="post-page-back">← back to blog</a>
+
+      <h1 class="post-page-title">Why I Built a Micro-kernel from Scratch</h1>
+      <div class="post-page-meta">July 2026</div>
+
+      <div class="post-page-content">
+        <p>
+          If you've ever wondered what happens between pressing the power button and seeing your desktop —
+          that magical space where hardware meets software — you've stumbled into the territory of operating
+          systems. And somewhere in that territory, I decided to build my own.
+        </p>
+
+        <h2>The Beginning</h2>
+        <p>
+          It started with <a href="https://github.com/prathampt/xv6" target="_blank" rel="noopener">xv6</a>,
+          a teaching operating system from MIT. Reading its code was a revelation — suddenly, concepts like
+          process scheduling, page tables, and system calls weren't abstract textbook ideas anymore. They
+          were real, tangible pieces of code that I could read, modify, and break.
+        </p>
+
+        <p>
+          But xv6 is a monolithic kernel. Everything — the file system, the process manager, the device
+          drivers — lives in kernel space. I wanted to understand the alternative: the <strong>microkernel</strong>
+          architecture, where the kernel does as little as possible and everything else runs as user-space
+          servers communicating through message passing.
+        </p>
+
+        <h2>What COSMOS Does</h2>
+        <p>
+          COSMOS is my attempt at a MINIX-inspired microkernel. Here's the architecture:
+        </p>
+
+        <ul>
+          <li><strong>Kernel</strong>: Handles only interrupts, IPC (inter-process communication), and basic scheduling</li>
+          <li><strong>Process Manager</strong>: Runs in user space, manages process lifecycle</li>
+          <li><strong>File Server</strong>: A virtual file system, also in user space</li>
+          <li><strong>Memory Manager</strong>: Handles page allocation and virtual memory</li>
+        </ul>
+
+        <p>
+          The key insight? The kernel becomes tiny and auditable. Each server can crash independently
+          without bringing down the whole system. It's elegant — and incredibly hard to get right.
+        </p>
+
+        <h2>What I Learned</h2>
+        <p>
+          Building an OS teaches you things no textbook can:
+        </p>
+
+        <blockquote>
+          The hardest bugs are the ones where the symptom is a thousand instructions away from the cause.
+        </blockquote>
+
+        <p>
+          I learned to think in terms of privilege levels, to debug with nothing but <code>printf</code>
+          statements and raw memory dumps, and to appreciate the sheer engineering that goes into making
+          Linux feel "simple" to use.
+        </p>
+
+        <h2>Should You Try This?</h2>
+        <p>
+          If you're a CS student — absolutely. Start with xv6, read the
+          <a href="https://pdos.csail.mit.edu/6.828/2023/xv6/book-riscv-rev3.pdf" target="_blank" rel="noopener">xv6 book</a>,
+          and then go deeper. You'll never look at your computer the same way again.
+        </p>
+
+        <hr>
+
+        <p>
+          <em>The COSMOS source code is available on
+          <a href="https://github.com/prathampt/cosmos" target="_blank" rel="noopener">GitHub</a>.
+          Feel free to explore, break things, and send me questions.</em>
+        </p>
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <p>
+        made with <span class="footer-heart">♥</span> by pratham
+        <br>
+        <a href="../index.html">back to home</a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
