@@ -150,7 +150,7 @@ async function loadProjects(fallbackJsonFile, containerId) {
       container.innerHTML = projects.map((project, i) => `
         <a class="project-card animate-in" href="${project.url}" target="_blank" rel="noopener" style="animation-delay: ${i * 0.05}s">
           <div class="project-card-header">
-            <h3>${project} ${project.name}</h3>
+            <h3>${project.name}</h3>
             <span class="project-card-arrow">→</span>
           </div>
           <p>${project.description}</p>
@@ -355,6 +355,16 @@ async function loadHobbyCounts() {
       const kavitas = await kavitaRes.json();
       const el = document.getElementById('kavita-count');
       if (el) el.textContent = `${kavitas.length} poems`;
+    }
+  } catch (e) {}
+
+  // Blog count
+  try {
+    const blogRes = await fetch(prefix + 'data/blog-posts.json');
+    if (blogRes.ok) {
+      const posts = await blogRes.json();
+      const el = document.getElementById('blog-count');
+      if (el) el.textContent = `${posts.length} posts`;
     }
   } catch (e) {}
 }
