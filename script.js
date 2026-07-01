@@ -147,18 +147,28 @@ async function loadProjects(fallbackJsonFile, containerId) {
       if (!response.ok) throw new Error('Fallback failed');
       const projects = await response.json();
 
-      container.innerHTML = projects.map((project, i) => `
-        <a class="project-card animate-in" href="${project.url}" target="_blank" rel="noopener" style="animation-delay: ${i * 0.05}s">
-          <div class="project-card-header">
-            <h3>${project.name}</h3>
-            <span class="project-card-arrow">→</span>
-          </div>
-          <p>${project.description}</p>
-          <div class="project-card-tags">
-            ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-          </div>
-        </a>
-      `).join('');
+      container.innerHTML = projects.map((repo, i) => {
+        const repoUrl = `https://github.com/${repo.author}/${repo.name}`;
+        
+        const desc = repo.description || "No description provided.";
+        const tags = [];
+        if (repo.language) tags.push(repo.language);
+        if (repo.stars) tags.push(`⭐ ${repo.stars}`);
+        if (repo.forks) tags.push(`🍴 ${repo.forks}`);
+
+        return `
+          <a class="project-card animate-in" href="${repoUrl}" target="_blank" rel="noopener" style="animation-delay: ${i * 0.05}s">
+            <div class="project-card-header">
+              <h3>${repo.name}</h3>
+              <span class="project-card-arrow">→</span>
+            </div>
+            <p>${desc}</p>
+            <div class="project-card-tags">
+              ${tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+            </div>
+          </a>
+        `;
+      }).join('');
     } catch (err) {
       container.innerHTML = '<p class="empty-state">Projects could not be loaded.</p>';
     }

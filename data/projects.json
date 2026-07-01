@@ -1,32 +1,50 @@
 [
-  {
-    "name": "dataStructureVisualizer",
-    "description": "An interactive tool that renders data structures as 3D objects — because sometimes you need to see a red-black tree from every angle to understand it.",
-    "url": "https://github.com/prathampt/dataStructureVisualizer",
-    "tags": ["C", "3D", "visualization"]
-  },
-  {
-    "name": "programmingHabits",
-    "description": "A native Linux productivity tool that integrates Pomodoro technique with health reminders. Because even programmers need to drink water and stretch.",
-    "url": "https://github.com/prathampt/programmingHabits",
-    "tags": ["Python", "GTK", "Linux"]
-  },
-  {
-    "name": "parallelFileTransfer",
-    "description": "Accelerates large file transfers by splitting them into chunks and sending them over parallel TCP connections. Networking meets performance engineering.",
-    "url": "https://github.com/prathampt/parallelFileTransfer",
-    "tags": ["Python", "TCP", "networking"]
-  },
-  {
-    "name": "xv6",
-    "description": "My enhanced fork of the xv6 teaching operating system — because reading Linux kernel code is hard, but reading xv6 is a joy. Added custom features and experiments.",
-    "url": "https://github.com/prathampt/xv6",
-    "tags": ["C", "OS", "RISC-V"]
-  },
-  {
-    "name": "DSA",
-    "description": "Comprehensive implementations of data structures and algorithms, purely in C. All the classics: trees, graphs, sorting, searching — the building blocks of everything.",
-    "url": "https://github.com/prathampt/DSA",
-    "tags": ["C", "algorithms"]
-  }
+   {
+      "author": "prathampt",
+      "name":"dataStructureVisualizer",
+      "description":"3D Data-Structure Visualizer is a powerful tool designed to provide an interactive and engaging way to understand complex data structures. By creating 3D visualizations of various data structures, …",
+      "language":"C",
+      "stars":3,
+      "forks":0
+   },
+   {
+      "author": "prathampt",
+      "name":"programmingHabits",
+      "description":"A native linux tool to boost productivity by integrating the Pomodoro technique into your system. This application provides regular break reminders, hydration and activity reminders, and helps to e…",
+      "language":"Python",
+      "stars":4,
+      "forks":2
+   },
+   {
+      "author": "prathampt",
+      "name":"calc",
+      "description":"The Calculator is a tool designed to perform basic arithmetic operations on numbers. Unlike traditional calculators, it accepts input as strings and handles operations with an extended range of num…",
+      "language":"C",
+      "stars":2,
+      "forks":1
+   },
+   {
+      "author": "prathampt",
+      "name":"DSA",
+      "description":"Implementation of Data-Structures and Algorithms purely in C. Compilation of all the code for DSA-I and DSA-II along with assignments. Read, Explore, Enjoy and keep smiling...",
+      "language":"C",
+      "stars":10,
+      "forks":2
+   },
+   {
+      "author": "prathampt",
+      "name":"parallelFileTransfer",
+      "description":"A Python-based file transfer application that accelerates the transmission of large files by utilizing parallel TCP connections, breaking files into smaller chunks and transmitting them concurrentl…",
+      "language":"Python",
+      "stars":9,
+      "forks":2
+   },
+   {
+      "author": "prathampt",
+      "name":"xv6",
+      "description":"xv6 is a wonderful \"learning\" OS (because it's difficult to start reading code of linux for beginners like me;) This is a fork of xv6 official repo, with some added features. Checkout other branche…",
+      "language":"C",
+      "stars":2,
+      "forks":0
+   }
 ]
