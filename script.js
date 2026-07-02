@@ -120,10 +120,16 @@ async function loadProjects(fallbackJsonFile, containerId) {
       const desc = repo.description || "No description provided.";
 
       // Build tags including stars and forks
-      const tags = [];
-      if (repo.language) tags.push(repo.language);
-      if (repo.stars) tags.push(`⭐ ${repo.stars}`);
-      if (repo.forks) tags.push(`🍴 ${repo.forks}`);
+      const tagsHtml = [];
+      if (repo.language) {
+        tagsHtml.push(`<span class="tag">${repo.language}</span>`);
+      }
+      if (repo.stars) {
+        tagsHtml.push(`<span class="tag"><svg class="tag-icon"><use href="#icon-star"></use></svg>${repo.stars}</span>`);
+      }
+      if (repo.forks) {
+        tagsHtml.push(`<span class="tag"><svg class="tag-icon"><use href="#icon-fork"></use></svg>${repo.forks}</span>`);
+      }
 
       return `
         <a class="project-card animate-in" href="${repoUrl}" target="_blank" rel="noopener" style="animation-delay: ${i * 0.05}s">
@@ -133,7 +139,7 @@ async function loadProjects(fallbackJsonFile, containerId) {
           </div>
           <p>${desc}</p>
           <div class="project-card-tags">
-            ${tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+            ${tagsHtml.join('')}
           </div>
         </a>
       `;
@@ -151,10 +157,16 @@ async function loadProjects(fallbackJsonFile, containerId) {
         const repoUrl = `https://github.com/${repo.author}/${repo.name}`;
         
         const desc = repo.description || "No description provided.";
-        const tags = [];
-        if (repo.language) tags.push(repo.language);
-        if (repo.stars) tags.push(`⭐ ${repo.stars}`);
-        if (repo.forks) tags.push(`🍴 ${repo.forks}`);
+        const tagsHtml = [];
+        if (repo.language) {
+          tagsHtml.push(`<span class="tag">${repo.language}</span>`);
+        }
+        if (repo.stars) {
+          tagsHtml.push(`<span class="tag"><svg class="tag-icon"><use href="#icon-star"></use></svg>${repo.stars}</span>`);
+        }
+        if (repo.forks) {
+          tagsHtml.push(`<span class="tag"><svg class="tag-icon"><use href="#icon-fork"></use></svg>${repo.forks}</span>`);
+        }
 
         return `
           <a class="project-card animate-in" href="${repoUrl}" target="_blank" rel="noopener" style="animation-delay: ${i * 0.05}s">
@@ -164,7 +176,7 @@ async function loadProjects(fallbackJsonFile, containerId) {
             </div>
             <p>${desc}</p>
             <div class="project-card-tags">
-              ${tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+              ${tagsHtml.join('')}
             </div>
           </a>
         `;

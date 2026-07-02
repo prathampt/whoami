@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="100%" height="100%" fill="#FFF9F0"/>
+  
+  <!-- Subtle background decorative elements -->
+  <circle cx="1050" cy="120" r="80" fill="none" stroke="#FFF0E0" stroke-width="3"/>
+  <circle cx="150" cy="500" r="120" fill="none" stroke="#FFF0E0" stroke-width="4"/>
+  
+  <!-- Decorative border -->
+  <rect x="30" y="30" width="1140" height="570" rx="15" fill="none" stroke="#E8E0D6" stroke-width="2"/>
+  <rect x="40" y="40" width="1120" height="550" rx="10" fill="none" stroke="#F0EAE2" stroke-width="1"/>
+  
+  <!-- Main Content -->
+  <g transform="translate(100, 260)">
+    <!-- Accent line -->
+    <line x1="0" y1="-80" x2="150" y2="-80" stroke="#E07A2F" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Greeting/Context -->
+    <text x="0" y="-40" font-family="'Caveat', cursive, sans-serif" font-size="36" fill="#E07A2F" font-weight="bold">hey there! 👋</text>
+    
+    <!-- Title -->
+    <text x="0" y="50" font-family="'Inter', system-ui, sans-serif" font-size="76" font-weight="800" fill="#2D2A26" letter-spacing="-1">Pratham Tandale</text>
+    
+    <!-- Subtitle / Motto -->
+    <text x="0" y="120" font-family="'Inter', system-ui, sans-serif" font-size="32" font-style="italic" fill="#6B6560">"Feet on ground, eyes on stars"</text>
+    
+    <!-- Tags / Roles -->
+    <g transform="translate(0, 190)">
+      <!-- Tag 1: Code -->
+      <rect x="0" y="0" width="140" height="46" rx="23" fill="#FFF0E0" stroke="#E8E0D6" stroke-width="1"/>
+      <text x="70" y="28" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="#E07A2F" text-anchor="middle">&lt;code/&gt;</text>
+      
+      <!-- Tag 2: Poet -->
+      <rect x="155" y="0" width="120" height="46" rx="23" fill="#FFF0E0" stroke="#E8E0D6" stroke-width="1"/>
+      <text x="215" y="28" font-family="'Noto Sans Devanagari', sans-serif" font-size="17" font-weight="600" fill="#E07A2F" text-anchor="middle">कविता</text>
+      
+      <!-- Tag 3: Dancer -->
+      <rect x="290" y="0" width="130" height="46" rx="23" fill="#FFF0E0" stroke="#E8E0D6" stroke-width="1"/>
+      <text x="355" y="28" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#E07A2F" text-anchor="middle">Dance</text>
+      
+      <!-- Tag 4: Reader -->
+      <rect x="435" y="0" width="130" height="46" rx="23" fill="#FFF0E0" stroke="#E8E0D6" stroke-width="1"/>
+      <text x="500" y="28" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#E07A2F" text-anchor="middle">Books</text>
+    </g>
+  </g>
+  
+  <!-- Top Right Star decorative -->
+  <path d="M1050 90 L1055 105 L1070 110 L1055 115 L1050 130 L1045 115 L1030 110 L1045 105 Z" fill="#E07A2F"/>
+</svg>
