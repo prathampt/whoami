@@ -1,12 +1,3 @@
-/* ============================================
-   PRATHAM TANDALE — Shared JavaScript
-   Blog, Kavita, Projects, Books, Dance logic
-   ============================================ */
-
-/**
- * Returns the relative path prefix depending on page location.
- * Helps resolve root assets/links when files are nested under /pages/ or other folders.
- */
 function getPathPrefix() {
   const path = window.location.pathname;
   if (path.includes('/pages/') || path.includes('/posts/') || path.includes('/kavitas/')) {
@@ -15,10 +6,6 @@ function getPathPrefix() {
   return '';
 }
 
-/**
- * Load a preview of posts (used on the home page).
- * Fetches a JSON file, renders the first `limit` items as a compact list.
- */
 async function loadPreview(jsonFile, listId, emptyId, limit, isDevanagari) {
   const list = document.getElementById(listId);
   const empty = document.getElementById(emptyId);
@@ -54,9 +41,6 @@ async function loadPreview(jsonFile, listId, emptyId, limit, isDevanagari) {
   }
 }
 
-/**
- * Load full post listings (used on blog.html and kavita.html).
- */
 async function loadPosts(jsonFile, containerId, emptyId, isDevanagari) {
   const container = document.getElementById(containerId);
   const empty = document.getElementById(emptyId);
@@ -74,7 +58,6 @@ async function loadPosts(jsonFile, containerId, emptyId, isDevanagari) {
       return;
     }
 
-    // Sort by date (newest first)
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     container.innerHTML = posts.map((post, i) => `
@@ -96,16 +79,12 @@ async function loadPosts(jsonFile, containerId, emptyId, isDevanagari) {
   }
 }
 
-/**
- * Load projects dynamically. Attempts to fetch from GitHub pinned API.
- * Falls back to local projects.json if API is down.
- */
 async function loadProjects(fallbackJsonFile, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
   try {
-    // Attempt dynamic fetch from github pinned proxy
+    // dynamic fetch from github pinned proxy
     const response = await fetch("https://pinned.berrysauce.dev/get/prathampt");
     if (!response.ok) throw new Error("API failed");
 
@@ -115,11 +94,7 @@ async function loadProjects(fallbackJsonFile, containerId) {
     container.innerHTML = pinnedRepos.map((repo, i) => {
       const nameLower = repo.name.toLowerCase();
       const repoUrl = `https://github.com/${repo.author}/${repo.name}`;
-      
-      // Clean description
       const desc = repo.description || "No description provided.";
-
-      // Build tags including stars and forks
       const tagsHtml = [];
       if (repo.language) {
         tagsHtml.push(`<span class="tag">${repo.language}</span>`);
@@ -155,7 +130,7 @@ async function loadProjects(fallbackJsonFile, containerId) {
 
       container.innerHTML = projects.map((repo, i) => {
         const repoUrl = `https://github.com/${repo.author}/${repo.name}`;
-        
+
         const desc = repo.description || "No description provided.";
         const tagsHtml = [];
         if (repo.language) {
@@ -187,15 +162,12 @@ async function loadProjects(fallbackJsonFile, containerId) {
   }
 }
 
-/**
- * Load books dynamically from Goodreads RSS feed via rss2json API.
- * Falls back to local books.json.
- */
 async function loadBooks(fallbackJsonFile, containerId, emptyId) {
   const container = document.getElementById(containerId);
   const empty = document.getElementById(emptyId);
   if (!container) return;
 
+  // this key is not a secret key :)
   const rssUrl = "https://www.goodreads.com/review/list_rss/194940068?key=nD5ufFTf6PtweUq2lCOycE7za3xVkcDvgfdxJIp0QJTZiUIo&shelf=read";
   const apiEndpoint = `https://x2j.dev/rss?url=${encodeURIComponent(rssUrl)}`;
 
@@ -238,9 +210,6 @@ async function loadBooks(fallbackJsonFile, containerId, emptyId) {
   }
 }
 
-/**
- * Render the book cover grid elements
- */
 function renderBookCovers(books, container) {
   container.innerHTML = books.map((book, i) => `
     <div class="book-cover animate-in" style="animation-delay: ${i * 0.03}s"
@@ -255,7 +224,6 @@ function renderBookCovers(books, container) {
     </div>
   `).join('');
 
-  // Add click handlers for lightbox
   container.querySelectorAll('.book-cover').forEach(cover => {
     cover.addEventListener('click', () => openBookLightbox(cover));
     cover.addEventListener('keydown', (e) => {
@@ -267,9 +235,6 @@ function renderBookCovers(books, container) {
   });
 }
 
-/**
- * Open the book lightbox with a zoomed cover image.
- */
 function openBookLightbox(coverEl) {
   const lightbox = document.getElementById('book-lightbox');
   const img = document.getElementById('lightbox-img');
@@ -290,7 +255,6 @@ function openBookLightbox(coverEl) {
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
 
-  // Close handlers
   const close = () => {
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
@@ -303,9 +267,6 @@ function openBookLightbox(coverEl) {
   };
 }
 
-/**
- * Load dance videos from dances.json and render as a thumbnail grid.
- */
 async function loadDances(jsonFile, containerId, emptyId) {
   const container = document.getElementById(containerId);
   const empty = document.getElementById(emptyId);
@@ -345,12 +306,8 @@ async function loadDances(jsonFile, containerId, emptyId) {
   }
 }
 
-/**
- * Load counts for hobby cards on the homepage.
- */
 async function loadHobbyCounts() {
   const prefix = getPathPrefix();
-  // Books count
   try {
     const booksRes = await fetch(prefix + 'data/books.json');
     if (booksRes.ok) {
@@ -358,9 +315,8 @@ async function loadHobbyCounts() {
       const el = document.getElementById('books-count');
       if (el) el.textContent = `${books.length} read`;
     }
-  } catch (e) {}
+  } catch (e) { }
 
-  // Dance count
   try {
     const danceRes = await fetch(prefix + 'data/dances.json');
     if (danceRes.ok) {
@@ -368,9 +324,8 @@ async function loadHobbyCounts() {
       const el = document.getElementById('dance-count');
       if (el) el.textContent = `${dances.length} videos`;
     }
-  } catch (e) {}
+  } catch (e) { }
 
-  // Kavita count
   try {
     const kavitaRes = await fetch(prefix + 'data/kavitas.json');
     if (kavitaRes.ok) {
@@ -378,43 +333,33 @@ async function loadHobbyCounts() {
       const el = document.getElementById('kavita-count');
       if (el) el.textContent = `${kavitas.length} poems`;
     }
-  } catch (e) {}
+  } catch (e) { }
 
-  // Blog count
   try {
-    const blogRes = await fetch(prefix + 'data/blog-posts.json');
+    const blogRes = await fetch(prefix + 'data/blog_posts.json');
     if (blogRes.ok) {
       const posts = await blogRes.json();
       const el = document.getElementById('blog-count');
       if (el) el.textContent = `${posts.length} posts`;
     }
-  } catch (e) {}
+  } catch (e) { }
 }
 
-/**
- * Format a date string into a human-readable format.
- */
 function formatDate(dateStr) {
   if (!dateStr) return '';
   const date = new Date(dateStr);
   if (isNaN(date.getTime())) return dateStr;
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   return `${months[date.getMonth()]} ${date.getFullYear()}`;
 }
 
-/**
- * Escape HTML attribute values to prevent XSS.
- */
 function escapeAttr(str) {
   if (!str) return '';
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;')
-            .replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    .replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-/**
- * Simple scroll-based reveal animation.
- */
 function initScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -433,5 +378,4 @@ function initScrollAnimations() {
   });
 }
 
-// Initialize animations on DOM ready
 document.addEventListener('DOMContentLoaded', initScrollAnimations);

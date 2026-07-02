@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Books — Pratham Tandale</title>
-  <meta name="description" content="Books I've read — a visual bookshelf of covers, from Murakami to Taleb.">
+  <meta name="description" content="Books I've read — a visual bookshelf of covers.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,7 +14,6 @@
 <body>
   <div class="container container-wide">
 
-    <!-- Navigation -->
     <nav class="nav" id="main-nav">
       <a href="../index.html">home</a>
       <span class="nav-separator">·</span>
@@ -29,24 +28,20 @@
       <a href="https://github.com/prathampt" target="_blank" rel="noopener">github</a>
     </nav>
 
-    <!-- Page Header -->
     <div class="page-header" id="books-header">
       <h1>📚 Books I've Read</h1>
       <p>A visual bookshelf — click any cover to take a closer look.</p>
     </div>
 
-    <!-- Book Covers Grid -->
     <div class="books-grid" id="books-grid">
       <!-- Populated dynamically by script.js -->
     </div>
 
-    <!-- Empty State -->
     <div class="empty-state" id="books-empty" style="display: none;">
       <span class="emoji">📚</span>
       <p>Bookshelf loading...</p>
     </div>
 
-    <!-- Lightbox Modal -->
     <div class="lightbox" id="book-lightbox">
       <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
       <div class="lightbox-content" id="lightbox-content">
@@ -56,7 +51,6 @@
       </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer" id="footer">
       <p>
         made with <span class="footer-heart">♥</span> by pratham

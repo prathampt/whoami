@@ -1,15 +1,17 @@
 # Pratham Tandale — Personal Website
 
-> *Feet on ground, eyes on stars* ⭐
+> _Feet on ground, eyes on stars_ ⭐
 
 A simple, aesthetic personal website built with pure HTML, CSS, and JavaScript. No frameworks, no build steps — just open `index.html` and you're live.
 
 ## 🚀 Quick Start
 
 ### View Locally
+
 Just open `index.html` in your browser. That's it!
 
 Or use a local server (recommended for blog/kavita listings to work):
+
 ```bash
 # Python
 python3 -m http.server 8000
@@ -19,7 +21,9 @@ npx serve .
 ```
 
 ### Deploy
+
 This site works with **any static hosting**:
+
 - **GitHub Pages**: Push to a `gh-pages` branch or enable Pages in repo settings
 - **Netlify**: Drag and drop the folder, or connect your repo
 - **Vercel**: Import the repo and deploy
@@ -30,6 +34,7 @@ This site works with **any static hosting**:
 ## 📝 How to Add a Blog Post
 
 1. **Copy the template**:
+
    ```bash
    cp posts/template.html posts/my-new-post.html
    ```
@@ -39,7 +44,8 @@ This site works with **any static hosting**:
    - Change the `<h1>` title and date
    - Write your content in the `post-page-content` div
 
-3. **Add an entry to `blog-posts.json`**:
+3. **Add an entry to `blog_posts.json`**:
+
    ```json
    {
      "title": "My New Post Title",
@@ -57,6 +63,7 @@ This site works with **any static hosting**:
 ## 🪷 How to Add a Kavita (कविता)
 
 1. **Copy the template**:
+
    ```bash
    cp kavitas/template.html kavitas/my-kavita.html
    ```
@@ -68,6 +75,7 @@ This site works with **any static hosting**:
    - Use `<span class="stanza-divider">· · ·</span>` between stanzas
 
 3. **Add an entry to `kavitas.json`**:
+
    ```json
    {
      "title": "कवितेचे नाव",
@@ -91,7 +99,7 @@ my_website/
 ├── kavita.html         ← Kavita listing page
 ├── style.css           ← All styles (edit colors, fonts here)
 ├── script.js           ← Blog/kavita listing logic
-├── blog-posts.json     ← Blog post index (add entries here)
+├── blog_posts.json     ← Blog post index (add entries here)
 ├── kavitas.json        ← Kavita index (add entries here)
 ├── posts/              ← Blog post HTML files
 │   ├── template.html   ← Copy this for new posts
@@ -105,22 +113,26 @@ my_website/
 ## 🎨 Customization
 
 ### Colors
+
 Edit the CSS custom properties at the top of `style.css`:
+
 ```css
 :root {
-  --bg-primary: #FFF9F0;      /* Page background */
-  --accent: #E07A2F;          /* Accent color (orange) */
-  --text-primary: #2D2A26;    /* Main text color */
+  --bg-primary: #fff9f0; /* Page background */
+  --accent: #e07a2f; /* Accent color (orange) */
+  --text-primary: #2d2a26; /* Main text color */
   /* ... more variables */
 }
 ```
 
 ### Fonts
+
 The site uses Google Fonts. Change them in the `@import` at the top of `style.css`.
 
 ### Content
+
 - Edit `index.html` to update your bio, projects, and social links
-- Edit `blog-posts.json` and `kavitas.json` to manage your posts
+- Edit `blog_posts.json` and `kavitas.json` to manage your posts
 
 ---
 

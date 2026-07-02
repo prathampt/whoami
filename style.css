@@ -1,11 +1,4 @@
-/* ============================================
-   PRATHAM TANDALE — Personal Website Styles
-   Inspired by ncase.me: simple, warm, personal
-   ============================================ */
-
-/* --- CSS Custom Properties (Design Tokens) --- */
 :root {
-  /* Colors — warm, personal palette */
   --bg-primary: #FFF9F0;
   --bg-secondary: #FFF3E0;
   --bg-card: #FFFFFF;
@@ -31,13 +24,11 @@
   --shadow-lg: 0 8px 24px rgba(45, 42, 38, 0.1);
   --shadow-card: 0 2px 8px rgba(45, 42, 38, 0.06);
 
-  /* Typography */
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-devanagari: 'Noto Sans Devanagari', sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   --font-handwritten: 'Caveat', cursive;
 
-  /* Spacing scale */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -47,18 +38,15 @@
   --space-3xl: 4rem;
   --space-4xl: 6rem;
 
-  /* Layout */
   --max-width: 680px;
   --border-radius: 8px;
   --border-radius-lg: 12px;
 
-  /* Transitions */
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
   --transition-slow: 400ms ease;
 }
 
-/* --- Reset & Base --- */
 *,
 *::before,
 *::after {
@@ -96,7 +84,6 @@ body::before {
   z-index: 0;
 }
 
-/* --- Main Container --- */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -105,7 +92,6 @@ body::before {
   z-index: 1;
 }
 
-/* --- Navigation --- */
 .nav {
   display: flex;
   align-items: center;
@@ -140,7 +126,6 @@ body::before {
   font-size: 0.8rem;
 }
 
-/* --- Hero Section --- */
 .hero {
   text-align: center;
   padding: var(--space-2xl) 0 var(--space-3xl);
@@ -190,7 +175,6 @@ body::before {
   border-bottom-color: var(--accent);
 }
 
-/* --- Section Headers --- */
 .section {
   margin-bottom: var(--space-3xl);
 }
@@ -213,7 +197,6 @@ body::before {
   font-size: 0.95rem;
 }
 
-/* --- Project Cards --- */
 .projects-grid {
   display: flex;
   flex-direction: column;
@@ -296,7 +279,6 @@ body::before {
   fill: currentColor;
 }
 
-/* --- Post List (Blog & Kavita listings on home) --- */
 .post-list {
   display: flex;
   flex-direction: column;
@@ -365,7 +347,6 @@ body::before {
   border-bottom-color: var(--accent);
 }
 
-/* --- Social Links --- */
 .social-links {
   display: flex;
   flex-wrap: wrap;
@@ -401,7 +382,6 @@ body::before {
   flex-shrink: 0;
 }
 
-/* --- Footer --- */
 .footer {
   text-align: center;
   padding: var(--space-3xl) 0 var(--space-xl);
@@ -431,12 +411,12 @@ body::before {
   animation: heartbeat 2s ease-in-out infinite;
 }
 
+/* Lovely... */
 @keyframes heartbeat {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.15); }
 }
 
-/* --- Blog / Kavita Listing Pages --- */
 .page-header {
   text-align: center;
   padding: var(--space-xl) 0 var(--space-2xl);
@@ -566,7 +546,6 @@ body::before {
   color: var(--accent);
 }
 
-/* --- Individual Post / Kavita Page --- */
 .post-page {
   padding: var(--space-xl) 0;
 }
@@ -704,7 +683,6 @@ body::before {
   margin: var(--space-2xl) 0;
 }
 
-/* --- Kavita-specific styling --- */
 .kavita-content {
   font-family: var(--font-devanagari);
   font-size: 1.1rem;
@@ -729,7 +707,6 @@ body::before {
   opacity: 0.5;
 }
 
-/* --- Animations --- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -755,18 +732,15 @@ body::before {
 .animate-in:nth-child(7) { animation-delay: 0.35s; }
 .animate-in:nth-child(8) { animation-delay: 0.4s; }
 
-/* Hero specific animations */
 .hero .hero-greeting { animation: fadeInUp 0.5s ease 0.1s forwards; opacity: 0; }
 .hero h1 { animation: fadeInUp 0.5s ease 0.2s forwards; opacity: 0; }
 .hero .hero-motto { animation: fadeInUp 0.5s ease 0.3s forwards; opacity: 0; }
 .hero .hero-intro { animation: fadeInUp 0.5s ease 0.4s forwards; opacity: 0; }
 
-/* --- Wider Container (for grid pages like books/dance) --- */
 .container-wide {
   max-width: 860px;
 }
 
-/* --- Beyond Code: Hobby Cards --- */
 .hobby-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -832,7 +806,6 @@ body::before {
   font-family: var(--font-mono);
 }
 
-/* --- Book Cover Grid --- */
 .books-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -872,7 +845,6 @@ body::before {
   transition: filter var(--transition-normal);
 }
 
-/* --- Lightbox --- */
 .lightbox {
   position: fixed;
   top: 0;
@@ -954,7 +926,6 @@ body::before {
   opacity: 1;
 }
 
-/* --- Dance Grid --- */
 .dance-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1090,7 +1061,6 @@ body::before {
   color: var(--accent-hover);
 }
 
-/* --- Responsive --- */
 @media (max-width: 600px) {
   html {
     font-size: 15.5px;
@@ -1156,13 +1126,11 @@ body::before {
   }
 }
 
-/* --- Selection color --- */
 ::selection {
   background: var(--accent-light);
   color: var(--text-primary);
 }
 
-/* --- Scrollbar --- */
 ::-webkit-scrollbar {
   width: 6px;
 }
