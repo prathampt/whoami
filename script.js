@@ -125,10 +125,10 @@ async function loadProjects(fallbackJsonFile, containerId) {
         tagsHtml.push(`<span class="tag">${repo.language}</span>`);
       }
       if (repo.stars) {
-        tagsHtml.push(`<span class="tag"><svg class="tag-icon"><use href="#icon-star"></use></svg>${repo.stars}</span>`);
+        tagsHtml.push(`<span class="tag"><svg class="tag-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><use href="#icon-star"></use></svg>${repo.stars}</span>`);
       }
       if (repo.forks) {
-        tagsHtml.push(`<span class="tag"><svg class="tag-icon"><use href="#icon-fork"></use></svg>${repo.forks}</span>`);
+        tagsHtml.push(`<span class="tag"><svg class="tag-icon" viewBox="0 0 640 640" width="16" height="16" fill="currentColor"><use href="#icon-fork"></use></svg>${repo.forks}</span>`);
       }
 
       return `
@@ -162,10 +162,10 @@ async function loadProjects(fallbackJsonFile, containerId) {
           tagsHtml.push(`<span class="tag">${repo.language}</span>`);
         }
         if (repo.stars) {
-          tagsHtml.push(`<span class="tag"><svg class="tag-icon"><use href="#icon-star"></use></svg>${repo.stars}</span>`);
+          tagsHtml.push(`<span class="tag"><svg class="tag-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><use href="#icon-star"></use></svg>${repo.stars}</span>`);
         }
         if (repo.forks) {
-          tagsHtml.push(`<span class="tag"><svg class="tag-icon"><use href="#icon-fork"></use></svg>${repo.forks}</span>`);
+          tagsHtml.push(`<span class="tag"><svg class="tag-icon" viewBox="0 0 640 640" width="16" height="16" fill="currentColor"><use href="#icon-fork"></use></svg>${repo.forks}</span>`);
         }
 
         return `
