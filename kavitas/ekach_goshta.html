@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>एकच गोष्ट... — Pratham Tandale</title>
+  <meta name="description" content="खास नात्यामागचे गुपित जाणून घेण्याची अनावर ओढ">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="https://img.icons8.com/sf-black/64/EBE3D8/star.png">
+</head>
+<body>
+  <div class="container">
+
+    <nav class="nav" id="main-nav">
+      <a href="../index.html">home</a>
+      <span class="nav-separator">·</span>
+      <a href="../pages/blog.html">blog</a>
+      <span class="nav-separator">·</span>
+      <a href="../pages/kavita.html" class="active">कविता</a>
+      <span class="nav-separator">·</span>
+      <a href="../pages/books.html">books</a>
+      <span class="nav-separator">·</span>
+      <a href="../pages/dance.html">dance</a>
+      <span class="nav-separator">·</span>
+      <a href="https://github.com/prathampt" target="_blank" rel="noopener">github</a>
+      <span class="nav-separator">·</span>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </nav>
+
+    <article class="post-page" id="kavita">
+      <a href="../pages/kavita.html" class="post-page-back">← back to कविता</a>
+
+      <h1 class="post-page-title devanagari">एकच गोष्ट...</h1>
+      <div class="post-page-meta">Oct 2018</div>
+
+      <div class="post-page-content kavita-content">
+
+        <div class="stanza">
+          <p>
+            एकच गोष्ट मला समजत नाही<br>
+            की हे असं का घडतं,<br>
+            तुझ्याच जवळ येऊन मला<br>
+            का असं धडधडतं.
+          </p>
+        </div>
+
+        <span class="stanza-divider">· · ·</span>
+
+        <div class="stanza">
+          <p>
+            येते तुझ्या चेहऱ्यावरती<br>
+            एक सुंदर हर्ष,<br>
+            जेव्हा करतो मी<br>
+            तुला हळूच स्पर्श.
+          </p>
+        </div>
+
+        <span class="stanza-divider">· · ·</span>
+
+        <div class="stanza">
+          <p>
+            जेव्हा-जब्हा पाहतो<br>
+            मी तुझ्या डोळ्यात,<br>
+            तेव्हा-तेव्हा दिसते मला आपले<br> 
+            नाते सांगणारी दोर तुझ्या गळ्यात.
+          </p>
+        </div>
+
+        <span class="stanza-divider">· · ·</span>
+
+        <div class="stanza">
+          <p>
+            का बरं, मी माझे गुपित<br>
+            फक्त तुलाच सांगतो,<br>
+            इतर कोणाच्याही रंगात नाही,<br>
+            फक्त तुझ्याच रंगात रंगतो.
+          </p>
+        </div>
+
+        <span class="stanza-divider">· · ·</span>
+
+        <div class="stanza">
+          <p>
+            का तू पण, मला बरे वाटावे<br>
+            असेच नेहमी वागतेस,<br>
+            कधी हसून बोलतेस,<br>
+            कधी कधी माझ्यावर रागावतेस.
+          </p>
+        </div>
+
+        <span class="stanza-divider">· · ·</span>
+
+        <div class="stanza">
+          <p>
+            काय आहे आपल्या दोघात<br>
+            सांगायला घे ना थोडं कष्ट,<br>
+            मला आज जाणूनच घ्यायचंय<br>
+            काय आहे ती एकच गोष्ट...<br>
+          </p>
+        </div>
+
+      </div>
+    </article>
+
+    <footer class="footer" id="footer">
+      <p>
+        made with <span class="footer-heart">♥</span> by pratham
+        <br>
+        <a href="../index.html">back to home</a> · code on <a href="https://github.com/prathampt/whoami" target="_blank" rel="noopener">github</a> (MIT) · content copyright (please cite & link back)
+      </p>
+    </footer>
+
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>

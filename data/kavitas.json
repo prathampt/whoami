@@ -12,5 +12,19 @@
     "description": "The intimacy of Love",
     "url": "kavitas/a_million_times.html",
     "tags": ["love", "intimacy", "romance"]
+  },
+  {
+    "title": "एकच गोष्ट...",
+    "date": "2018-07-03",
+    "description": "खास नात्यामागचे गुपित जाणून घेण्याची अनावर ओढ",
+    "url": "kavitas/ekach_goshta.html",
+    "tags": ["प्रेम", "गुपित"]
+  },
+  {
+    "title": "आस स्वप्नाची...",
+    "date": "2018-07-03",
+    "description": "विचारांच्या गर्दीतून सुंदर स्वप्नांकडे",
+    "url": "kavitas/aas_swapnanchi.html",
+    "tags": ["झोप", "स्वप्न", "विचार"]
   }
 ]
