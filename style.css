@@ -22,6 +22,10 @@
   --lightbox-backdrop: rgba(45, 42, 38, 0.85);
   --book-hover-shadow: 0 12px 28px rgba(224, 122, 47, 0.25), 0 4px 10px rgba(0, 0, 0, 0.15);
 
+  --pre-bg: #2D2A26;
+  --pre-text: #F8F0E6;
+  --pre-border: none;
+
   --shadow-sm: 0 1px 3px rgba(45, 42, 38, 0.06);
   --shadow-md: 0 4px 12px rgba(45, 42, 38, 0.08);
   --shadow-lg: 0 8px 24px rgba(45, 42, 38, 0.1);
@@ -74,6 +78,10 @@
   --lightbox-backdrop: rgba(6, 8, 20, 0.85);
   --book-hover-shadow: 0 12px 28px rgba(56, 189, 248, 0.3), 0 4px 10px rgba(0, 0, 0, 0.3);
 
+  --pre-bg: #0B0F24;
+  --pre-text: #E2E8F0;
+  --pre-border: 1px solid #1E294B;
+
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.7);
@@ -116,6 +124,16 @@ body.theme-transitioning * {
   to {
     clip-path: circle(var(--clip-radius, 100%) at var(--clip-x, 50% 50%) var(--clip-y, 50% 50%));
   }
+}
+
+.theme-img-dark {
+  display: none !important;
+}
+:root[data-theme="dark"] .theme-img-light {
+  display: none !important;
+}
+:root[data-theme="dark"] .theme-img-dark {
+  display: block !important;
 }
 
 *,
@@ -749,8 +767,9 @@ body::before {
 }
 
 .post-page-content pre {
-  background: var(--text-primary);
-  color: #F8F0E6;
+  background: var(--pre-bg);
+  color: var(--pre-text);
+  border: var(--pre-border);
   padding: var(--space-lg);
   border-radius: var(--border-radius);
   overflow-x: auto;
