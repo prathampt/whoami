@@ -22,9 +22,37 @@
   },
   {
     "title": "आस स्वप्नाची...",
-    "date": "2018-07-03",
+    "date": "2018-10-10",
     "description": "विचारांच्या गर्दीतून सुंदर स्वप्नांकडे",
     "url": "kavitas/aas_swapnanchi.html",
     "tags": ["झोप", "स्वप्न", "विचार"]
+  },
+  {
+    "title": "श्रीमंती",
+    "date": "2017-02-16",
+    "description": "परोपकारातच खरी 'मनाची श्रीमंती'",
+    "url": "kavitas/shrimanti.html",
+    "tags": ["परोपकार", "श्रीमंती"]
+  },
+  {
+    "title": "The Sky",
+    "date": "2019-03-21",
+    "description": "The future still remains",
+    "url": "kavitas/the_sky.html",
+    "tags": ["uplifting", "motivation"]
+  },
+  {
+    "title": "A Girl",
+    "date": "2018-09-15",
+    "description": "An unexpected innocent meeting",
+    "url": "kavitas/a_girl.html",
+    "tags": ["simple", "innocence", "love"]
+  },
+  {
+    "title": "चला एक माणूस घडवूया...",
+    "date": "2019-05-13",
+    "description": "बदल घडवूया",
+    "url": "kavitas/ek_manus_ghadvuya.html",
+    "tags": ["माणुसकी", "प्रेरणादायी"]
   }
 ]
