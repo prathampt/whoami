@@ -378,4 +378,48 @@ function initScrollAnimations() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', initScrollAnimations);
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('theme-toggle');
+  if (!toggleBtn) return;
+
+  toggleBtn.addEventListener('click', (event) => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    // Fallback for browsers that don't support View Transitions
+    if (!document.startViewTransition) {
+      document.body.classList.add('theme-transitioning');
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      setTimeout(() => {
+        document.body.classList.remove('theme-transitioning');
+      }, 750);
+      return;
+    }
+
+    const rect = toggleBtn.getBoundingClientRect();
+    const x = event.clientX ?? (rect.left + rect.width / 2);
+    const y = event.clientY ?? (rect.top + rect.height / 2);
+
+    const endRadius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
+    );
+
+    document.documentElement.style.setProperty('--clip-x', x + 'px');
+    document.documentElement.style.setProperty('--clip-y', y + 'px');
+    document.documentElement.style.setProperty('--clip-radius', endRadius + 'px');
+
+    document.startViewTransition(() => {
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  });
+}
+
+function initAll() {
+  initScrollAnimations();
+  initThemeToggle();
+}
+
+document.addEventListener('DOMContentLoaded', initAll);

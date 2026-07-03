@@ -19,6 +19,9 @@
   --border: #E8E0D6;
   --border-light: #F0EAE2;
 
+  --lightbox-backdrop: rgba(45, 42, 38, 0.85);
+  --book-hover-shadow: 0 12px 28px rgba(224, 122, 47, 0.25), 0 4px 10px rgba(0, 0, 0, 0.15);
+
   --shadow-sm: 0 1px 3px rgba(45, 42, 38, 0.06);
   --shadow-md: 0 4px 12px rgba(45, 42, 38, 0.08);
   --shadow-lg: 0 8px 24px rgba(45, 42, 38, 0.1);
@@ -45,6 +48,74 @@
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
   --transition-slow: 400ms ease;
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #060814;
+  --bg-secondary: #0B0F24;
+  --bg-card: #111736;
+  --bg-code: #161D45;
+
+  --text-primary: #E2E8F0;
+  --text-secondary: #94A3B8;
+  --text-muted: #5E708E;
+
+  --accent: #38BDF8;
+  --accent-hover: #7DD3FC;
+  --accent-light: rgba(56, 189, 248, 0.1);
+  --accent-glow: rgba(56, 189, 248, 0.2);
+
+  --link: #38BDF8;
+  --link-hover: #7DD3FC;
+
+  --border: #1E294B;
+  --border-light: #151E3D;
+
+  --lightbox-backdrop: rgba(6, 8, 20, 0.85);
+  --book-hover-shadow: 0 12px 28px rgba(56, 189, 248, 0.3), 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.theme-transitioning,
+body.theme-transitioning * {
+  transition: background-color 0.75s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.75s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.75s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.75s cubic-bezier(0.4, 0, 0.2, 1), 
+              fill 0.75s cubic-bezier(0.4, 0, 0.2, 1), 
+              stroke 0.75s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+::view-transition-image-pair(root) {
+  isolation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+  animation: reveal 0.85s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes reveal {
+  from {
+    clip-path: circle(0px at var(--clip-x, 50% 50%) var(--clip-y, 50% 50%));
+  }
+  to {
+    clip-path: circle(var(--clip-radius, 100%) at var(--clip-x, 50% 50%) var(--clip-y, 50% 50%));
+  }
 }
 
 *,
@@ -124,6 +195,49 @@ body::before {
   color: var(--border);
   user-select: none;
   font-size: 0.8rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast), transform var(--transition-normal);
+  vertical-align: middle;
+  outline: none;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+.theme-toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  stroke-width: 2.2px;
+  transition: transform var(--transition-normal);
+}
+
+.theme-toggle:active svg {
+  transform: scale(0.85) rotate(-45deg);
+}
+
+[data-theme="dark"] .sun-icon {
+  display: block;
+}
+[data-theme="dark"] .moon-icon {
+  display: none;
+}
+:root:not([data-theme="dark"]) .sun-icon {
+  display: none;
+}
+:root:not([data-theme="dark"]) .moon-icon {
+  display: block;
 }
 
 .hero {
@@ -825,7 +939,7 @@ body::before {
 
 .book-cover:hover {
   transform: scale(1.1) rotate(-1deg);
-  box-shadow: 0 12px 28px rgba(224, 122, 47, 0.25), 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--book-hover-shadow);
 }
 
 .book-cover:hover img {
@@ -871,7 +985,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(45, 42, 38, 0.85);
+  background: var(--lightbox-backdrop);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -995,7 +1109,6 @@ body::before {
   width: 20px;
   height: 20px;
   color: var(--text-primary);
-  margin-left: 2px;
 }
 
 .dance-card:hover .dance-card-play svg {
