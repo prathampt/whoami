@@ -71,9 +71,44 @@
   },
   {
     "title": "तिने... मला...",
-    "date": "2020-05-19",
+    "date": "2022-05-19",
     "description": "एका प्रिय व्यक्ती...",
     "url": "kavitas/tine_mala.html",
     "tags": ["प्रेम", "कृतज्ञता"]
+  },
+  {
+    "title": "दोन हृदये भेटलेले",
+    "date": "2020-07-14",
+    "description": "दोन व्याकुळ मनांची पावसात भेट",
+    "url": "kavitas/don_hraday_bhetalele.html",
+    "tags": ["प्रेम", "विरह", "भेट"]
+  },
+  {
+    "title": "Finding Her...",
+    "date": "2020-02-20",
+    "description": "Life's ultimate divine gift",
+    "url": "kavitas/finding_her.html",
+    "tags": ["her", "love"]
+  },
+  {
+    "title": "एकट्याचा प्रवास",
+    "date": "2020-10-07",
+    "description": "खचून न जाता ध्येयाकडे वाटचाल करणा प्रवास",
+    "url": "kavitas/ektyacha_pravas.html",
+    "tags": ["प्रेरणादायी","संघर्ष"]
+  },
+  {
+    "title": "एकाकीपणा",
+    "date": "2020-10-30",
+    "description": "एकटेपणाचा आनंद की एकाकीपणाचा कट?",
+    "url": "kavitas/ekakipana.html",
+    "tags": ["एकांत","भ्रम"]
+  },
+  {
+    "title": "आज मी रडणार नाही...",
+    "date": "2021-01-12",
+    "description": "संकटांना सामोरे जाताना, हार न मानण्याची जिद्द",
+    "url": "kavitas/aaj_mi_radnar_nahi.html",
+    "tags": ["प्रेरणादायी", "जिद्द"]
   }
 ]

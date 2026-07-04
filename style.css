@@ -1281,7 +1281,6 @@ body::before {
 }
 
 .post-signature {
-  text-align: right;
   margin-top: var(--space-xl);
   font-family: var(--font-handwritten), var(--font-body);
   font-size: 1.45rem;
