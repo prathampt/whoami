@@ -5,5 +5,19 @@
     "description": "Does earning more makes you more happy, or less sad?",
     "url": "posts/more_money_less_sadness.html",
     "tags": ["money", "philosophy", "perception"]
+  }, 
+  {
+    "title": "Is this worth doing?",
+    "date": "2024-12-23",
+    "description": "Advice for juniors preparing for placements and interviews",
+    "url": "posts/is_this_worth_doing.html",
+    "tags": ["advice", "consistency", "interviews"]
+  }, 
+  {
+    "title": "What is love?",
+    "date": "2025-09-14",
+    "description": "A monologue",
+    "url": "posts/what_is_love.html",
+    "tags": ["love", "emotions"]
   }
 ]

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Is this worth doing?</title>
+  <meta name="description" content="Advice for juniors preparing for placements and interviews">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="https://img.icons8.com/sf-black/64/EBE3D8/star.png">
+</head>
+<body>
+  <div class="container">
+
+    <nav class="nav" id="main-nav">
+      <a href="../index.html">home</a>
+      <span class="nav-separator">·</span>
+      <a href="../pages/blog.html" class="active">blog</a>
+      <span class="nav-separator">·</span>
+      <a href="../pages/kavita.html">कविता</a>
+      <span class="nav-separator">·</span>
+      <a href="../pages/books.html">books</a>
+      <span class="nav-separator">·</span>
+      <a href="../pages/dance.html">dance</a>
+      <span class="nav-separator">·</span>
+      <a href="https://github.com/prathampt" target="_blank" rel="noopener">github</a>
+      <span class="nav-separator">·</span>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </nav>
+
+    <article class="post-page" id="post">
+      <a href="../pages/blog.html" class="post-page-back">← back to blog</a>
+
+      <h1 class="post-page-title">Is this worth doing?</h1>
+      <div class="post-page-meta">Dec 2024</div>
+
+      <div class="post-page-content">
+
+        <p>
+          We are already heading towards the end of 2024. How fast time flies by!
+        </p>
+
+        <p>
+          Consistency and discipline throughout the year helped me to achieve these 
+          figures in following images; but, do they really matter?
+        </p>
+
+        <img src="../images/leetcode_profile.jpeg" alt="Leetcode Profile" class="theme-img-light">
+        <img src="../images/leetcode_profile.jpeg" alt="Leetcode Profile" class="theme-img-dark">
+        
+        <p>
+          Numbers on your online profile does not matter unless they carry some actual meaning with them.
+          Don't go for numbers, go for the practical skills they are offering to you...
+        </p>
+
+        <p>
+          Don't solve DSA questions just to increase the number of questions you have solved; 
+          solve them to learn. Learn patterns, learn approaches and learn the hidden meaning 
+          behind them. DSA is not just a tool to crack interview, but it really helps to shape
+          our thought process and to think like a computer.
+        </p>
+
+        <p>
+          Don't push code to GitHub to color your "green wall"; carve out some meaningful
+          projects with the help of your skills. Do projects which will really help society,
+          your friends or at least you to do things in a better way. 
+        </p>
+
+        <blockquote>
+          Make learning your first priority, let success be its by-product.
+        </blockquote>
+
+        <p>
+          Taking actions with some reward in mind is not bad, but remember the ultimate goal
+          is to grow, not to win! Change approach, do the same thing with different mindset, 
+          in a different way, for a different cause and you'll see the 'different you' altogether!
+        </p>
+
+        <p>
+          Be consistent with your actions, be disciplined with your commitments. Then 'luck' 
+          is nothing but pure initial practice, hidden to everyone else.
+        </p>
+
+        <p>
+          Here are few things I learned this year (You can find these at <a href="https://csi.coep.org.in/#/ty-diaries/arcesium_india/2026/pratham-tandale">CSI TY Diaries</a>):
+        </p>
+
+        <h4>
+          Learn to digest failures!
+        </h4>
+        <p>
+          It's not the end of the world if you fail. Cry for an hour and then start again. 
+          Don't let your failure affect your next performance.
+        </p>
+
+        <h4>
+          All days are not the same!
+        </h4>
+        <p>
+          You might feel like not doing anything. Just push yourself a little, and do the 
+          smallest version of what you do daily.
+        </p>
+
+        <h4>
+          Breaks are important!
+        </h4>
+        <p>
+          If you can solve 10 DSA question daily continuously for 30 days, then trust me,
+          you need to consult a doctor 😯
+        </p>
+
+        <h4>
+          Make yourself Resilient!
+        </h4>
+        <p>
+          Whatever breaks your streak, start again!
+        </p>
+
+        <h4>
+          Resume is important!
+        </h4>
+        <p>
+          Invest time, keep it short and crisp, review it from seniors.
+        </p>
+
+        <h4>
+          Do unique projects!
+        </h4>
+        <p>
+          Projects don't stand out in interviews, the ideas behind them do.
+        </p>
+
+        <h4>
+          Start already!
+        </h4>
+        <p>
+          If you haven't, 'now' is the best time to start.
+        </p>
+
+        <h4>
+          Think Loudly!
+        </h4>
+        <p>
+          Let the interviewer know what you are thinking, so utter all the words which you are thinking.
+        </p>
+
+        <h4>
+          Enjoy the process!
+        </h4>
+        <p>
+          The more you enjoy the interview, the more likely it is that they will select you.
+        </p>
+
+        <p>
+          <em>Also, life is way bigger than this. This is not life, just a part of life. Thus, remember to smile...</em>
+        </p>
+
+        <blockquote>
+          Just smile for no reason, and this will become the reason for your happiness...
+        </blockquote>
+
+        <div class="post-signature">- Pratham</div>
+      </div>
+    </article>
+
+    <footer class="footer" id="footer">
+      <p>
+        made with <span class="footer-heart">♥</span> by pratham
+        <br>
+        <a href="../index.html">back to home</a> · code on <a href="https://github.com/prathampt/whoami" target="_blank" rel="noopener">github</a> (MIT) · content copyright (please cite & link back)
+      </p>
+    </footer>
+
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>
