@@ -19,5 +19,12 @@
     "description": "A monologue",
     "url": "posts/what_is_love.html",
     "tags": ["love", "emotions"]
+  }, 
+  {
+    "title": "A scar on heart",
+    "date": "2025-12-31",
+    "description": "A conversation",
+    "url": "posts/a_scar_on_heart.html",
+    "tags": ["emotions", "acceptance"]
   }
 ]
